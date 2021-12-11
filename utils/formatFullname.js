@@ -6,5 +6,9 @@ module.exports = (fullName) => {
   const firstName = names[0];
   const lastName = names[1];
   if(!firstName || !lastName) return 'Error';
-  return firstName.charAt(0).toUpperCase + firstName.substr(1).toLowerCase() + lastName.charAt(0).toUpperCase + lastName.substr(1).toLowerCase() ;
+  let firstNameInitial = firstName.charAt(0).toUpperCase();
+  let firstNameRest = firstName.substring(1).toLowerCase();
+  let lastNameInitial = lastName.charAt(0).toUpperCase();
+  let lastNameRest = lastName.substring(1).toLowerCase();
+  return firstNameInitial + firstNameRest + ' ' + lastNameInitial + lastNameRest;
 };
